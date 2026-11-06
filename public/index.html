@@ -1311,8 +1311,8 @@ async function sendBroadcast(){
  if(!ids.length)return alert('Pilih minimal satu customer.');if(!text)return alert('Isi pesan broadcast terlebih dahulu.');
  if(!db.settings.apiBase||!db.settings.apiKey)return alert('Atur URL API Worker dan GOMA API Key di Pengaturan terlebih dahulu.');
  if(window.__bcRunning)return alert('Broadcast sebelumnya masih berjalan.');
- const BC_DELAY=5000;
- if(!confirm(`Kirim pesan ke ${ids.length} nomor melalui ${sender}?\nJeda 5 detik per pesan (estimasi ${Math.ceil(ids.length*5/60)} menit). Jangan tutup tab ini selama proses.`))return;
+ const BC_DELAY=3000;
+ if(!confirm(`Kirim pesan ke ${ids.length} nomor melalui ${sender}?\nJeda 3 detik per pesan (estimasi ${Math.ceil(ids.length*3/60)} menit). Jangan tutup tab ini selama proses.`))return;
  window.__bcRunning=true;const bcBtn=[...document.querySelectorAll('button')].find(x=>(x.getAttribute('onclick')||'').includes('sendBroadcast'));const bcLabel=bcBtn?.textContent;
  const phoneId=db.settings.broadcastNumberIds?.[sender];let ok=0,failed=[];
  let idx=0;

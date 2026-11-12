@@ -1,7 +1,7 @@
 // Service worker Hai Goma CRM.
 // Aturan: data chat/booking TIDAK pernah di-cache (selalu langsung ke server).
 // Hanya halaman & ikon yang disimpan, supaya aplikasi tetap terbuka walau sinyal jelek.
-const CACHE = "goma-crm-shell-v3";
+const CACHE = "goma-crm-shell-v5";
 const SHELL = ["/", "/manifest.webmanifest", "/icon-192.png", "/icon-512.png", "/badge-96.png", "/bell.wav"];
 
 self.addEventListener("install", event => {
